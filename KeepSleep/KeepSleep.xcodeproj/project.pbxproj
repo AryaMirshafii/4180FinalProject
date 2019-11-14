@@ -1,0 +1,672 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ABB4B98FDD484D74E70C85A2 /* Pods_KeepSleep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D89098FD270C10529E07FB68 /* Pods_KeepSleep.framework */; };
+		D1A6CA80237CCFA0002B8522 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6CA7F237CCFA0002B8522 /* AppDelegate.swift */; };
+		D1A6CA82237CCFA0002B8522 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6CA81237CCFA0002B8522 /* ViewController.swift */; };
+		D1A6CA85237CCFA0002B8522 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A6CA83237CCFA0002B8522 /* Main.storyboard */; };
+		D1A6CA87237CCFA1002B8522 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1A6CA86237CCFA1002B8522 /* Assets.xcassets */; };
+		D1A6CA8A237CCFA1002B8522 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A6CA88237CCFA1002B8522 /* LaunchScreen.storyboard */; };
+		D1A6CA95237CCFA2002B8522 /* KeepSleepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6CA94237CCFA2002B8522 /* KeepSleepTests.swift */; };
+		D1A6CAA0237CCFA2002B8522 /* KeepSleepUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6CA9F237CCFA2002B8522 /* KeepSleepUITests.swift */; };
+		D1A6CAAE237CD093002B8522 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = D1A6CAAD237CD093002B8522 /* Fonts */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D1A6CA91237CCFA2002B8522 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1A6CA74237CCFA0002B8522 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1A6CA7B237CCFA0002B8522;
+			remoteInfo = KeepSleep;
+		};
+		D1A6CA9C237CCFA2002B8522 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1A6CA74237CCFA0002B8522 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1A6CA7B237CCFA0002B8522;
+			remoteInfo = KeepSleep;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		49E69412331622B1AFC66C42 /* Pods-KeepSleep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepSleep.debug.xcconfig"; path = "Target Support Files/Pods-KeepSleep/Pods-KeepSleep.debug.xcconfig"; sourceTree = "<group>"; };
+		D1A6CA7C237CCFA0002B8522 /* KeepSleep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepSleep.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1A6CA7F237CCFA0002B8522 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D1A6CA81237CCFA0002B8522 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D1A6CA84237CCFA0002B8522 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D1A6CA86237CCFA1002B8522 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D1A6CA89237CCFA1002B8522 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D1A6CA8B237CCFA1002B8522 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1A6CA90237CCFA2002B8522 /* KeepSleepTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeepSleepTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1A6CA94237CCFA2002B8522 /* KeepSleepTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepSleepTests.swift; sourceTree = "<group>"; };
+		D1A6CA96237CCFA2002B8522 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1A6CA9B237CCFA2002B8522 /* KeepSleepUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeepSleepUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1A6CA9F237CCFA2002B8522 /* KeepSleepUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepSleepUITests.swift; sourceTree = "<group>"; };
+		D1A6CAA1237CCFA2002B8522 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1A6CAAD237CD093002B8522 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
+		D89098FD270C10529E07FB68 /* Pods_KeepSleep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeepSleep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE311AF2F0CBB3A84806EE45 /* Pods-KeepSleep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepSleep.release.xcconfig"; path = "Target Support Files/Pods-KeepSleep/Pods-KeepSleep.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D1A6CA79237CCFA0002B8522 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABB4B98FDD484D74E70C85A2 /* Pods_KeepSleep.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1A6CA8D237CCFA2002B8522 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1A6CA98237CCFA2002B8522 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		32A8BE69E928AC668311C910 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				49E69412331622B1AFC66C42 /* Pods-KeepSleep.debug.xcconfig */,
+				FE311AF2F0CBB3A84806EE45 /* Pods-KeepSleep.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6F4669AC7CBDCFB947BF0A82 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D89098FD270C10529E07FB68 /* Pods_KeepSleep.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D1A6CA73237CCFA0002B8522 = {
+			isa = PBXGroup;
+			children = (
+				D1A6CA7E237CCFA0002B8522 /* KeepSleep */,
+				D1A6CA93237CCFA2002B8522 /* KeepSleepTests */,
+				D1A6CA9E237CCFA2002B8522 /* KeepSleepUITests */,
+				D1A6CA7D237CCFA0002B8522 /* Products */,
+				32A8BE69E928AC668311C910 /* Pods */,
+				6F4669AC7CBDCFB947BF0A82 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D1A6CA7D237CCFA0002B8522 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1A6CA7C237CCFA0002B8522 /* KeepSleep.app */,
+				D1A6CA90237CCFA2002B8522 /* KeepSleepTests.xctest */,
+				D1A6CA9B237CCFA2002B8522 /* KeepSleepUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D1A6CA7E237CCFA0002B8522 /* KeepSleep */ = {
+			isa = PBXGroup;
+			children = (
+				D1A6CAAD237CD093002B8522 /* Fonts */,
+				D1A6CA7F237CCFA0002B8522 /* AppDelegate.swift */,
+				D1A6CA81237CCFA0002B8522 /* ViewController.swift */,
+				D1A6CA83237CCFA0002B8522 /* Main.storyboard */,
+				D1A6CA86237CCFA1002B8522 /* Assets.xcassets */,
+				D1A6CA88237CCFA1002B8522 /* LaunchScreen.storyboard */,
+				D1A6CA8B237CCFA1002B8522 /* Info.plist */,
+			);
+			path = KeepSleep;
+			sourceTree = "<group>";
+		};
+		D1A6CA93237CCFA2002B8522 /* KeepSleepTests */ = {
+			isa = PBXGroup;
+			children = (
+				D1A6CA94237CCFA2002B8522 /* KeepSleepTests.swift */,
+				D1A6CA96237CCFA2002B8522 /* Info.plist */,
+			);
+			path = KeepSleepTests;
+			sourceTree = "<group>";
+		};
+		D1A6CA9E237CCFA2002B8522 /* KeepSleepUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D1A6CA9F237CCFA2002B8522 /* KeepSleepUITests.swift */,
+				D1A6CAA1237CCFA2002B8522 /* Info.plist */,
+			);
+			path = KeepSleepUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D1A6CA7B237CCFA0002B8522 /* KeepSleep */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1A6CAA4237CCFA2002B8522 /* Build configuration list for PBXNativeTarget "KeepSleep" */;
+			buildPhases = (
+				B3BD745377717E668632E7E1 /* [CP] Check Pods Manifest.lock */,
+				D1A6CA78237CCFA0002B8522 /* Sources */,
+				D1A6CA79237CCFA0002B8522 /* Frameworks */,
+				D1A6CA7A237CCFA0002B8522 /* Resources */,
+				054ECCD04104519F0BCE5341 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeepSleep;
+			productName = KeepSleep;
+			productReference = D1A6CA7C237CCFA0002B8522 /* KeepSleep.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D1A6CA8F237CCFA2002B8522 /* KeepSleepTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1A6CAA7237CCFA2002B8522 /* Build configuration list for PBXNativeTarget "KeepSleepTests" */;
+			buildPhases = (
+				D1A6CA8C237CCFA2002B8522 /* Sources */,
+				D1A6CA8D237CCFA2002B8522 /* Frameworks */,
+				D1A6CA8E237CCFA2002B8522 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1A6CA92237CCFA2002B8522 /* PBXTargetDependency */,
+			);
+			name = KeepSleepTests;
+			productName = KeepSleepTests;
+			productReference = D1A6CA90237CCFA2002B8522 /* KeepSleepTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D1A6CA9A237CCFA2002B8522 /* KeepSleepUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1A6CAAA237CCFA2002B8522 /* Build configuration list for PBXNativeTarget "KeepSleepUITests" */;
+			buildPhases = (
+				D1A6CA97237CCFA2002B8522 /* Sources */,
+				D1A6CA98237CCFA2002B8522 /* Frameworks */,
+				D1A6CA99237CCFA2002B8522 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1A6CA9D237CCFA2002B8522 /* PBXTargetDependency */,
+			);
+			name = KeepSleepUITests;
+			productName = KeepSleepUITests;
+			productReference = D1A6CA9B237CCFA2002B8522 /* KeepSleepUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D1A6CA74237CCFA0002B8522 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Arya Mirshafii";
+				TargetAttributes = {
+					D1A6CA7B237CCFA0002B8522 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					D1A6CA8F237CCFA2002B8522 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = D1A6CA7B237CCFA0002B8522;
+					};
+					D1A6CA9A237CCFA2002B8522 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = D1A6CA7B237CCFA0002B8522;
+					};
+				};
+			};
+			buildConfigurationList = D1A6CA77237CCFA0002B8522 /* Build configuration list for PBXProject "KeepSleep" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D1A6CA73237CCFA0002B8522;
+			productRefGroup = D1A6CA7D237CCFA0002B8522 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D1A6CA7B237CCFA0002B8522 /* KeepSleep */,
+				D1A6CA8F237CCFA2002B8522 /* KeepSleepTests */,
+				D1A6CA9A237CCFA2002B8522 /* KeepSleepUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D1A6CA7A237CCFA0002B8522 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1A6CA8A237CCFA1002B8522 /* LaunchScreen.storyboard in Resources */,
+				D1A6CA87237CCFA1002B8522 /* Assets.xcassets in Resources */,
+				D1A6CA85237CCFA0002B8522 /* Main.storyboard in Resources */,
+				D1A6CAAE237CD093002B8522 /* Fonts in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1A6CA8E237CCFA2002B8522 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1A6CA99237CCFA2002B8522 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		054ECCD04104519F0BCE5341 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KeepSleep/Pods-KeepSleep-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxBluetoothKit/RxBluetoothKit.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBluetoothKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KeepSleep/Pods-KeepSleep-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3BD745377717E668632E7E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KeepSleep-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D1A6CA78237CCFA0002B8522 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1A6CA82237CCFA0002B8522 /* ViewController.swift in Sources */,
+				D1A6CA80237CCFA0002B8522 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1A6CA8C237CCFA2002B8522 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1A6CA95237CCFA2002B8522 /* KeepSleepTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1A6CA97237CCFA2002B8522 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1A6CAA0237CCFA2002B8522 /* KeepSleepUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D1A6CA92237CCFA2002B8522 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1A6CA7B237CCFA0002B8522 /* KeepSleep */;
+			targetProxy = D1A6CA91237CCFA2002B8522 /* PBXContainerItemProxy */;
+		};
+		D1A6CA9D237CCFA2002B8522 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1A6CA7B237CCFA0002B8522 /* KeepSleep */;
+			targetProxy = D1A6CA9C237CCFA2002B8522 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D1A6CA83237CCFA0002B8522 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1A6CA84237CCFA0002B8522 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D1A6CA88237CCFA1002B8522 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1A6CA89237CCFA1002B8522 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D1A6CAA2237CCFA2002B8522 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D1A6CAA3237CCFA2002B8522 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D1A6CAA5237CCFA2002B8522 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49E69412331622B1AFC66C42 /* Pods-KeepSleep.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y4XKW822R6;
+				INFOPLIST_FILE = KeepSleep/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = aryaMirshafii.KeepSleep;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D1A6CAA6237CCFA2002B8522 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE311AF2F0CBB3A84806EE45 /* Pods-KeepSleep.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y4XKW822R6;
+				INFOPLIST_FILE = KeepSleep/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = aryaMirshafii.KeepSleep;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D1A6CAA8237CCFA2002B8522 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y4XKW822R6;
+				INFOPLIST_FILE = KeepSleepTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = aryaMirshafii.KeepSleepTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeepSleep.app/KeepSleep";
+			};
+			name = Debug;
+		};
+		D1A6CAA9237CCFA2002B8522 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y4XKW822R6;
+				INFOPLIST_FILE = KeepSleepTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = aryaMirshafii.KeepSleepTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeepSleep.app/KeepSleep";
+			};
+			name = Release;
+		};
+		D1A6CAAB237CCFA2002B8522 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y4XKW822R6;
+				INFOPLIST_FILE = KeepSleepUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = aryaMirshafii.KeepSleepUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KeepSleep;
+			};
+			name = Debug;
+		};
+		D1A6CAAC237CCFA2002B8522 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y4XKW822R6;
+				INFOPLIST_FILE = KeepSleepUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = aryaMirshafii.KeepSleepUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KeepSleep;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D1A6CA77237CCFA0002B8522 /* Build configuration list for PBXProject "KeepSleep" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1A6CAA2237CCFA2002B8522 /* Debug */,
+				D1A6CAA3237CCFA2002B8522 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1A6CAA4237CCFA2002B8522 /* Build configuration list for PBXNativeTarget "KeepSleep" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1A6CAA5237CCFA2002B8522 /* Debug */,
+				D1A6CAA6237CCFA2002B8522 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1A6CAA7237CCFA2002B8522 /* Build configuration list for PBXNativeTarget "KeepSleepTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1A6CAA8237CCFA2002B8522 /* Debug */,
+				D1A6CAA9237CCFA2002B8522 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1A6CAAA237CCFA2002B8522 /* Build configuration list for PBXNativeTarget "KeepSleepUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1A6CAAB237CCFA2002B8522 /* Debug */,
+				D1A6CAAC237CCFA2002B8522 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D1A6CA74237CCFA0002B8522 /* Project object */;
+}
