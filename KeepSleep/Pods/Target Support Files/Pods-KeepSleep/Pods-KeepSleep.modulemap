@@ -1,6 +1,0 @@
-framework module Pods_KeepSleep {
-  umbrella header "Pods-KeepSleep-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -1,0 +1,8 @@
+${PODS_ROOT}/Target Support Files/Pods-4180FinalApp/Pods-4180FinalApp-frameworks.sh
+${BUILT_PRODUCTS_DIR}/IBMSwiftCircuitBreaker/CircuitBreaker.framework
+${BUILT_PRODUCTS_DIR}/LoggerAPI/LoggerAPI.framework
+${BUILT_PRODUCTS_DIR}/Logging/Logging.framework
+${BUILT_PRODUCTS_DIR}/RxBluetoothKit/RxBluetoothKit.framework
+${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework
+${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
+${BUILT_PRODUCTS_DIR}/SwiftyRequest/SwiftyRequest.framework

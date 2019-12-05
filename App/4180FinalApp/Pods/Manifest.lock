@@ -1,0 +1,42 @@
+PODS:
+  - IBMSwiftCircuitBreaker (5.0.3):
+    - LoggerAPI (~> 1.7)
+  - LoggerAPI (1.9.0):
+    - Logging (~> 1.1)
+  - Logging (1.1.1)
+  - RxBluetoothKit (5.1.4):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.5.0)
+  - SwiftyJSON (5.0.0)
+  - SwiftyRequest (2.2.1):
+    - IBMSwiftCircuitBreaker (~> 5.0)
+    - LoggerAPI (~> 1.7)
+
+DEPENDENCIES:
+  - RxBluetoothKit
+  - SwiftyJSON
+  - SwiftyRequest
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - RxBluetoothKit
+    - RxSwift
+  trunk:
+    - IBMSwiftCircuitBreaker
+    - LoggerAPI
+    - Logging
+    - SwiftyJSON
+    - SwiftyRequest
+
+SPEC CHECKSUMS:
+  IBMSwiftCircuitBreaker: 300d1d56e6cbe9f1159e4d5ce202d9bb11295272
+  LoggerAPI: fb78461eedac5316b290f2404d88b9d614d96c57
+  Logging: c1d514914944d786e0f17a41a6431e44a88a7ec1
+  RxBluetoothKit: d18f7beb5fd4d2b24659d57548e38d5d2fac885b
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  SwiftyRequest: 8e84cd4839fe2429285fe60a5812b5634a8ecb83
+
+PODFILE CHECKSUM: 348750fb8ec1f53bc9d8e3acd0ce485da6b0ad3b
+
+COCOAPODS: 1.8.4

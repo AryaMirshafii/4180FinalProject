@@ -1,0 +1,138 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: SensorCloud
+
+custom:
+  sensorTableName: 'SensorTable'
+  dataTableName: 'DataTable'
+
+provider:
+  name: aws
+  runtime: java8
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'us-east-1'}
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+      Resource:
+        - { "Fn::GetAtt": ["SensorDynamoDBTable", "Arn" ] }
+        - { "Fn::GetAtt": ["DataDynamoDBTable", "Arn" ] }
+  environment:
+    SENSOR_TABLE_NAME: ${self:custom.sensorTableName}
+    DATA_TABLE_NAME: ${self:custom.dataTableName}
+
+package:
+  artifact: 'target/${self:service}-${self:provider.stage}.jar'
+
+#Sensor Stuff
+functions:
+  createSensor:
+    handler: com.serverless.SensorFiles.CreateSensorHandler
+    events:
+      - http:
+          path: /sensors
+          method: post
+
+  deleteSensor:
+    handler: com.serverless.SensorFiles.DeleteSensorHandler
+    events:
+      - http:
+          path: /sensors/{id}
+          method: delete
+  getSensor:
+    handler: com.serverless.SensorFiles.GetSensorHandler
+    events:
+      - http:
+          path: /sensors/{id}
+          method: get
+  listSensor:
+    handler: com.serverless.SensorFiles.ListSensorsHandler
+    events:
+      - http:
+          path: /sensors
+          method: get
+  putSensor:
+    handler: com.serverless.SensorFiles.PutSensorHandler
+    events:
+      - http:
+          path: /sensors/{id}
+          method: put
+
+
+
+
+
+
+
+
+  #Sensor Data stuff
+  createSensorData:
+    handler: com.serverless.SensorDataFiles.CreateSensorDataHandler
+    events:
+      - http:
+          path: /data
+          method: post
+  deleteSensorData:
+    handler: com.serverless.SensorDataFiles.DeleteSensorDataHandler
+    events:
+      - http:
+          path: /data/{id}
+          method: delete
+  getSensorData:
+    handler: com.serverless.SensorDataFiles.GetSensorDataHandler
+    events:
+    - http:
+        path: /data/{id}
+        method: get
+
+resources:
+  Resources:
+    SensorDynamoDBTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:custom.sensorTableName}
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+
+
+    DataDynamoDBTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:custom.dataTableName}
+        AttributeDefinitions:
+            - AttributeName: id
+              AttributeType: S
+
+        KeySchema:
+        - AttributeName: id
+          KeyType: HASH
+
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+
+

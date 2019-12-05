@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fd8-IJ-yON">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HKGrotesk-SemiBold.ttf">
+            <string>HKGrotesk-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Sensor Table View-->
+        <scene sceneID="JTR-Ms-TAd">
+            <objects>
+                <tableViewController id="Fd8-IJ-yON" customClass="SensorTableView" customModule="_180FinalApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zfo-MW-KFO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="sensorCell" rowHeight="73" id="kY5-jl-IyZ" customClass="SensorCell" customModule="_180FinalApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="73"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kY5-jl-IyZ" id="ehP-YO-CfP">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="73"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="sensorCell" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLg-ej-4xZ">
+                                            <rect key="frame" x="16" y="4" width="343" height="58"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="HKGrotesk-SemiBold" family="HK Grotesk" pointSize="40"/>
+                                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="SerialLabel" destination="vLg-ej-4xZ" id="Ukh-Gg-jWg"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Fd8-IJ-yON" id="kJE-RH-FFD"/>
+                            <outlet property="delegate" destination="Fd8-IJ-yON" id="dKr-Zw-qrw"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="showSensor" id="Ijn-YJ-qOU"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="njS-gJ-bjC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-988" y="26.53673163418291"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_180FinalApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfN-Sy-jLO">
+                                <rect key="frame" x="16" y="127" width="343" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="Azs-tT-LP1"/>
+                                    <constraint firstAttribute="height" constant="31" id="JDI-Uv-jAS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HKGrotesk-SemiBold" family="HK Grotesk" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAM-1d-5xs">
+                                <rect key="frame" x="16" y="174" width="343" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="cET-Yu-uld"/>
+                                    <constraint firstAttribute="width" constant="343" id="vWp-RB-qlP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HKGrotesk-SemiBold" family="HK Grotesk" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hum:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwg-Sp-lQ5">
+                                <rect key="frame" x="16" y="221" width="343" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="0P2-u6-t9b"/>
+                                    <constraint firstAttribute="width" constant="343" id="VPM-bo-rI7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HKGrotesk-SemiBold" family="HK Grotesk" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accel X:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oum-Pf-DxN">
+                                <rect key="frame" x="16" y="268" width="343" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="ctg-5Q-L6P"/>
+                                    <constraint firstAttribute="width" constant="343" id="y5v-O8-zx3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HKGrotesk-SemiBold" family="HK Grotesk" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accel Y:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05i-5C-Hcf">
+                                <rect key="frame" x="16" y="315" width="343" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="aqo-FR-8H1"/>
+                                    <constraint firstAttribute="height" constant="31" id="mVa-mV-kCu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HKGrotesk-SemiBold" family="HK Grotesk" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accel Z:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ZQ-LI-5xy">
+                                <rect key="frame" x="16" y="362" width="343" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="OXh-Nf-cWJ"/>
+                                    <constraint firstAttribute="width" constant="343" id="hmW-if-ZWd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HKGrotesk-SemiBold" family="HK Grotesk" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sensor Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPX-t8-w58">
+                                <rect key="frame" x="47" y="56" width="281" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="o8q-z7-ox6"/>
+                                    <constraint firstAttribute="width" constant="281" id="p1c-6F-Y82"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HKGrotesk-SemiBold" family="HK Grotesk" pointSize="32"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FzS-U5-Id4">
+                                <rect key="frame" x="104" y="456" width="167" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="167" id="Sz1-FE-yzh"/>
+                                    <constraint firstAttribute="height" constant="73" id="gYd-9D-vah"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HKGrotesk-SemiBold" family="HK Grotesk" pointSize="50"/>
+                                <state key="normal" title="Refresh">
+                                    <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="refresh:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IKV-mh-EHC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Motion Detected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LuL-Ke-FFA">
+                                <rect key="frame" x="16" y="409" width="343" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="90H-jW-N58"/>
+                                    <constraint firstAttribute="height" constant="31" id="fPQ-ip-Epx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HKGrotesk-SemiBold" family="HK Grotesk" pointSize="34"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="kPX-t8-w58" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="56" id="0Qg-HF-1oj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mfN-Sy-jLO" secondAttribute="trailing" constant="16" id="1Bv-kc-F1b"/>
+                            <constraint firstItem="1ZQ-LI-5xy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7SC-NC-Ifp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iwg-Sp-lQ5" secondAttribute="trailing" constant="16" id="7gr-uT-1hN"/>
+                            <constraint firstItem="oum-Pf-DxN" firstAttribute="top" secondItem="iwg-Sp-lQ5" secondAttribute="bottom" constant="16" id="81x-eQ-LbI"/>
+                            <constraint firstItem="cAM-1d-5xs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="98e-4x-QZX"/>
+                            <constraint firstItem="iwg-Sp-lQ5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="DYI-W5-l9G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kPX-t8-w58" secondAttribute="trailing" constant="47" id="I32-6D-zgZ"/>
+                            <constraint firstItem="mfN-Sy-jLO" firstAttribute="top" secondItem="kPX-t8-w58" secondAttribute="bottom" constant="16" id="KIW-5x-W2s"/>
+                            <constraint firstItem="1ZQ-LI-5xy" firstAttribute="top" secondItem="05i-5C-Hcf" secondAttribute="bottom" constant="16" id="OSh-qz-ifi"/>
+                            <constraint firstItem="cAM-1d-5xs" firstAttribute="top" secondItem="mfN-Sy-jLO" secondAttribute="bottom" constant="16" id="R93-jb-Zdq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="05i-5C-Hcf" secondAttribute="trailing" constant="16" id="ck7-KA-2Es"/>
+                            <constraint firstItem="kPX-t8-w58" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="dk9-dv-dST"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FzS-U5-Id4" secondAttribute="trailing" constant="104" id="gIb-ia-n6F"/>
+                            <constraint firstItem="LuL-Ke-FFA" firstAttribute="top" secondItem="1ZQ-LI-5xy" secondAttribute="bottom" constant="16" id="gW1-8g-PUR"/>
+                            <constraint firstItem="05i-5C-Hcf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gnb-ah-F1S"/>
+                            <constraint firstItem="FzS-U5-Id4" firstAttribute="top" secondItem="LuL-Ke-FFA" secondAttribute="bottom" constant="16" id="iKd-2J-TJh"/>
+                            <constraint firstItem="mfN-Sy-jLO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="lhS-KU-Ki7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cAM-1d-5xs" secondAttribute="trailing" constant="16" id="mZx-Af-rJE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1ZQ-LI-5xy" secondAttribute="trailing" constant="16" id="pOu-PE-gYt"/>
+                            <constraint firstItem="iwg-Sp-lQ5" firstAttribute="top" secondItem="cAM-1d-5xs" secondAttribute="bottom" constant="16" id="rQE-Jr-Gmu"/>
+                            <constraint firstItem="LuL-Ke-FFA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="s3D-hG-NYG"/>
+                            <constraint firstItem="FzS-U5-Id4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="104" id="tLy-Nt-2eZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LuL-Ke-FFA" secondAttribute="trailing" constant="16" id="uzf-j8-dpv"/>
+                            <constraint firstItem="oum-Pf-DxN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vC1-81-zoy"/>
+                            <constraint firstItem="05i-5C-Hcf" firstAttribute="top" secondItem="oum-Pf-DxN" secondAttribute="bottom" constant="16" id="xjI-Dm-xPq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oum-Pf-DxN" secondAttribute="trailing" constant="16" id="zLj-t2-wb3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="accelerationXLabel" destination="oum-Pf-DxN" id="NGS-Ld-xwf"/>
+                        <outlet property="accelerationYLabel" destination="05i-5C-Hcf" id="oVb-1B-j7M"/>
+                        <outlet property="accelerationZLabel" destination="1ZQ-LI-5xy" id="w1C-wv-eA6"/>
+                        <outlet property="humidityLabel" destination="iwg-Sp-lQ5" id="g0Y-Oz-Yji"/>
+                        <outlet property="motionLabel" destination="LuL-Ke-FFA" id="dZg-GA-pSr"/>
+                        <outlet property="nameLabel" destination="mfN-Sy-jLO" id="hL6-LT-zer"/>
+                        <outlet property="temperatureLabel" destination="cAM-1d-5xs" id="Qjd-dn-Q5x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
+        </scene>
+    </scenes>
+</document>

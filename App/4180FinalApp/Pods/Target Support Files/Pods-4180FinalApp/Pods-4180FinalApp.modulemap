@@ -1,0 +1,6 @@
+framework module Pods_4180FinalApp {
+  umbrella header "Pods-4180FinalApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
