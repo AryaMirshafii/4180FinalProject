@@ -10,7 +10,7 @@ import Foundation
 
 class Endpoints{
     
-    let SENSOR_URL = "https://qin8khj9f3.execute-api.us-east-1.amazonaws.com/dev/sensors";
+    let SENSOR_URL = "https://5gzljxwdwk.execute-api.us-east-1.amazonaws.com/dev/sensors";
     
     init() {
         

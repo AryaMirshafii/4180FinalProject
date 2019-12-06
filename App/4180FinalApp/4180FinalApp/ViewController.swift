@@ -110,11 +110,11 @@ class ViewController: UIViewController {
     func setLabels(){
         if let sensorLoaded = sensor{
             nameLabel.text = "Name: " + sensorLoaded.name;
-            temperatureLabel.text = "Temperature: " + String(sensorLoaded.currentTemperature);
+            temperatureLabel.text = "Temperature: " + String(sensorLoaded.currentTemperature) + " °F";
             accelerationXLabel.text = "Accel X: " + String(sensorLoaded.currentAccelerationX) + " M/S"
             accelerationYLabel.text = "Accel Y: " + String(sensorLoaded.currentAccelerationY) + " M/S"
             accelerationZLabel.text = "Accel Z: " + String(sensorLoaded.currentAccelerationZ) + " M/S"
-            humidityLabel.text = "Humidity: " + String(sensorLoaded.currentHumidity);
+            humidityLabel.text = "Humidity: " + String(sensorLoaded.currentHumidity) + " mg/L";
             
             if(sensorLoaded.motionDetected){
                 motionLabel.text = "Motion Detected!"
