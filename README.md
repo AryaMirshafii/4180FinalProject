@@ -13,9 +13,12 @@ Table of Contents
             * [Wiring Diagram](#wiring-diagram)
             * [Connecting the XBee module](#connecting-the-xbee-module)
             * [Connceting WiFi](#connceting-wifi)
-            * [Steps for Connecting the PocketBeagle to Eduroam](#steps-for-connecting-the-pocketbeagle-to)
+            * [Connecting the PocketBeagle to Eduroam](#connecting-the-pocketbeagle-to-eduroam)
       * [Conclustion](#conclustion)
-      * [Contributers](#contributers)
+      * [Helpful Links/Thanks to](#helpful-links/thanks-to)
+         * [mBED Sensors](#mbed-sensors)
+         * [PocketBeagle Communication](#pocketbeagle-communication)
+         * [WiFi Configuration](#wifi-configuration)
 
 # IoT Senors Network 
 ## Intoduction
@@ -25,10 +28,18 @@ Table of Contents
 ### Cloud Service
 ### Web Service API
 ### mBed Sensor Pad
+#### Wiring Diagram
+#### Building mbed code
+#### Parts List
 ### PocketBeagle
 #### Wiring Diagram
 #### Connecting the XBee module
-#### Connceting WiFi
-#### Steps for Connecting the PocketBeagle to Eduroam 
+#### Adding WiFi
+#### Connecting the PocketBeagle to Eduroam 
+#### Building program
+#### Parts List
 ## Conclustion
-## Contributers
+## Helpful Links/Thanks to:
+### mBED Sensors
+### PocketBeagle Communication
+### WiFi Configuration
