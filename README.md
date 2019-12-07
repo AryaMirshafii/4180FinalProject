@@ -1,2 +1,16 @@
-# 4180FinalProject
-Repository containing our source code for the 4180 Final Project
+# IoT Network 
+---------------------------------------------------------
+## Intoduction
+
+## Description
+
+## Methodology
+---------------------------------------------------------
+### Cloud Service
+### Web Service API
+### PocketBeagle
+### mBed Sensor Pad
+
+## Conclustion
+
+## Contributers
