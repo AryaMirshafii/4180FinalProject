@@ -85,7 +85,7 @@ one that your institional uses for logging in via Linux operating systems. For e
 Tech tutorial for getting on the network for Ubuntu. Contact the IT department at your school for more information. Edit the 
 anonymous identity. Use eduroam@domain.edu. Domain is replaced by the domain used in your institutional email. Use Vim, Nano or 
 your favorite console text editor. If you were not able to sftp in the network, you can create the file in this directory.
-More information on this configuration file can be found [here] (https://manpages.debian.org/testing/connman/connman-service.config.5.en.html).
+More information on this configuration file can be found [here](https://manpages.debian.org/testing/connman/connman-service.config.5.en.html).
 ```console
 debian@machine:~$ cd /var/lib/connman
 debian@machine:~$ sudo vim /var/lib/connman/eduroam.config
@@ -111,7 +111,7 @@ debian@machine:~$ sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
 ```
 if it doesn't connect to eduroam restart and run this command to diagnose what went wrong.
 ```console
-debian@machine:~$ journalctl | grep connman | less
+debian@machine:~$ journalctl | grep connmand | less
 ```
 #### Building Cloud Communication Program
 ## Conclustion
@@ -119,7 +119,11 @@ IoT networks work and improve a company or individual's ability capture sensor d
 network allowed us to capture sensor data and send it over Eduroam, the fastest internet network on campus. We found the other 
 network GT-Other to be too slow for our application.
 ## Desired Improvements
-1. Add security to the 
+1. Add security to the communication between Sensor Pad and PocketBeagle, also from PocketBeagle to the Web
+2. Build a more robust application for cloud communication in C++.
+3. Allow more than one sensor pad to be connected to a single PocketBeagle, requires XBee configuration.
+4. Figure out how to get IPv6 hostnames resolved.
+5. Add more sensors, sensor pads. 
 ## Helpful Links/Thanks to:
 ### mBED Sensors
 ### PocketBeagle Communication
