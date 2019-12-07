@@ -62,12 +62,12 @@ On Linux:
 ```console
 user@machine:~$ cd PocketBeagleCode 
 ```
-Use the password temppwd
 ```console
 user@machine:~$ sftp debian@192.168.7.2
 > put eduroam.config
 > exit
 ```
+Use the password temppwd
 2. Connect Serially to the PocketBeagle (use screen or minicom or any other serial utility)
 You have to find the device name of the PocketBeagle. On mac and linux is might begin with usbmodem on Windows it will come up
 as a Comm devices
