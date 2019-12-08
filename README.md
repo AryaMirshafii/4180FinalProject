@@ -42,6 +42,7 @@ The programming languges used were,
 2. Swift
 ## How to Build Project
 ### Block Diagram
+![Block Diagram](/Images/blockdiagram.png)
 ### Cloud Service
 ### Web Service API
 ### IOS Application
