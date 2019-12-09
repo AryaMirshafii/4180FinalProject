@@ -96,7 +96,72 @@ This block of xml adds the dependency for the Java AWS SDK Dynamodb which allows
 ##### serverless.yml
 This is a swagger file which is part of the OpenAPI standard for defining the basic structure and properties of a web based API. In this project, when the .jar file is uploaded to the cloud, Amazon Web Services parses it to determine the properties for the service being created. This file can also be used by other developers to view the strucutre of the API without having to read through all of the source code. It is not as helpful in this proejct, due to its small size and low complexity, but a .yml file is invaluable in large scale proejcts with hundreds of endpoints and API behaviors.
 
+The names of the databases used in this project are defined as 
+custom:
+```
+  sensorTableName: 'SensorTable'
+  dataTableName: 'DataTable'
+```
+Here, a table is created for storing Sensor information, and another for storing SensorData.
+```
+provider:
+  name: aws
+  runtime: java8
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'us-east-1'}
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+      Resource:
+        - { "Fn::GetAtt": ["SensorDynamoDBTable", "Arn" ] }
+        - { "Fn::GetAtt": ["DataDynamoDBTable", "Arn" ] }
+  environment:
+    SENSOR_TABLE_NAME: ${self:custom.sensorTableName}
+    DATA_TABLE_NAME: ${self:custom.dataTableName}
 
+```
+The above lines define the project name, programming language used, AWS regions, and database attributes and capabilities. The environemtn variables SENSOR_TABLE_NAME, and DATA_TABLE_NAME are later used to bind classes/objects to their respsective databases.
+
+Next, endpoints are defined under the functions section:
+```
+#Sensor Stuff
+functions:
+  createSensor:
+    handler: com.serverless.SensorFiles.CreateSensorHandler
+    events:
+      - http:
+          path: /sensors
+          method: post
+
+```
+Each item under functions: includes the name of the endpoint, the handler which handles the response and input for the defined endpoint. The createSensor function uses the http protocol which is handled by -http: and the relative paths are set to /sensors. Since creating a sensor requres a POST request, the method paramter is set to post.
+
+Finally, the properties for the databases are defined as follows for each database:
+```
+resources:
+  Resources:
+    SensorDynamoDBTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:custom.sensorTableName}
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+```
+
+The following code defines database, database type, and sets attributes for the keys used in the database. Keys are used to index the data, which is used by the individual endpoints and can be used to perform analysis. The ProvisionedThroughput property defines the throughput capacity and overall responsiveness for the database. It should be noted that since this project is relatively small scale it is acceptable to use 1 for both ReadCapacityUnits and WriteCapacityUnits. If the system was scaled up, these values would likely need to be changed to 5 or greater in order to reduce system latency.
 The directory structure is as follows:
 - dal
 - SensorDataFiles
