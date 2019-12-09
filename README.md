@@ -266,6 +266,76 @@ The wiring for the various sensors and peripherals to the MBed can be found belo
 
 
 #### Building mbed code
+The Code for the Mbed Sensor Tag is written in C++ and using the MBed online compiler and is relatively simple. It reads in data from the connected sensors and prints them out using the XBee which behaves as a serial output.
+
+To begin, necessary libraries are imported using include statements:
+``` C++
+#include "mbed.h"
+#include "LSM9DS1.h"
+#include "HTU21D.h"
+#include "ultrasonic.h"
+```
+
+Then, the variables for the XBee, PC Serial, and Sensors is initialzied using 
+
+``` C++
+Serial xbee1(p9, p10); //Creates a variable for serial comunication through pin 9 and 10
+DigitalOut rst1(p11); //Digital reset for the XBee, 200ns for reset
+Serial pc(USBTX, USBRX);//Opens up serial communication through the USB port via the computer
+AnalogIn LM61(p15); 
+LSM9DS1 imu(p28, p27, 0xD6, 0x3C);
+HTU21D temphumid(p28, p27); //Temp humid sensor || SDA, SCL
+```
+
+Then, like any other C++ program, the code begins execution in the main() function.
+
+First, the XBee is reset, which is a hardware defined necessity in order to begin communication.
+
+``` C++
+ rst1 = 0; //Set reset pin to 0
+ myled = 0;//Set LED3 to 0
+ myled2= 0;//Set LED4 to 0
+ wait_ms(1);//Wait at least one millisecond
+ rst1 = 1;//Set reset pin to 1
+ wait_ms(1);//Wait another millisecond
+ imu.begin();
+ 
+```
+Next, the IMU is initialized and calibrated using :
+``` C++
+ if (!imu.begin()) {
+        pc.printf("Failed to communicate with LSM9DS1.\n");
+  }
+  imu.calibrate();
+```
+
+Afterwards, the program begins a continuous while loop where the sensor data is read and printed to the XBee using Serial.
+
+Reading the data:
+``` C++
+imu.readMag();
+imu.readAccel();
+imu.readTemp();  
+float accelX = imu.calcAccel(imu.ax);
+float accelY = imu.calcAccel(imu.ay);
+float accelZ = imu.calcAccel(imu.az);
+        
+tempC = ((LM61*3.3)-0.600)*100.0;
+//convert to degrees F
+tempF = (9.0*tempC)/5.0 + 32.0;
+humidity = temphumid.sample_humid(); 
+```
+
+Printing the data to the XBee:
+
+``` C++
+xbee1.printf("AX:%f\n\r", accelX);
+xbee1.printf("AY:%f\n\r", accelY);
+xbee1.printf("AZ:%f\n\r", accelZ);
+xbee1.printf("T:%f \n\r", tempF);
+xbee1.printf("H:%d \n\r", humidity);
+```
+
 #### Parts List
 ### PocketBeagle
 #### Wiring Diagram
