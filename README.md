@@ -167,8 +167,33 @@ The directory structure is as follows:
 - SensorDataFiles
 - SensorFiles
 ##### dal
-This directory contains the source code for the objects that encapsulate the data being passed throughout the API. The two classes are Sensor, which encapsulates a sensor and SensorData, which encapsulates the data being collected from every sensor.
+This directory contains the source code for the objects that encapsulate the data being passed throughout the API. The two classes are Sensor, which encapsulates a sensor and SensorData, which encapsulates the data being collected from every sensor. These classes follow a basic java structure but the following tags are necessary to ensure that the created objects are able to be stored in their respective DynamoDB Tables:
 
+The DynamoDBTable tag defines the name of the database in which objects of this class are being stored in.
+```
+@DynamoDBTable(tableName = "SENSOR_TABLE_NAME")
+```
+
+The DynamoDBHashKey tag sets the key for the class to the property of "id". This is so the database knows which data point it should index the objects by.
+```
+@DynamoDBHashKey(attributeName = "id")
+```
+Other non-key attributes can be defined using the DynamoDBAttribute tag:
+```
+@DynamoDBAttribute(attributeName = "name")
+```
+##### SensorDataFiles
+This directory includes the API handlers that pertain to CRUD operations for Sensors. For example, the code to handle the deletion of Sensors can be found in DeleteSensorHandler. This code is pretty self explanitory with a couple of exceptions.
+
+First, in order to be able to handle an HTTP request, the classes need to implement:
+```
+handleRequest(Map<String, Object> input, Context context)
+```
+As part of this implementation, the classes need to override the method:
+```
+public ApiGatewayResponse handleRequest(Map<String, Object> input, Context context) 
+```
+This method handles the actual data passed into the endpoint and returns a response that notifies if the request was properly processed and returns the requested information or if there was an an error.
 
 
 ### IOS Application
