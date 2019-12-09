@@ -224,6 +224,47 @@ Sensor View:
 The sensor pad for this project is based on an MBed microcontroller that interfaces with an [XBee board](https://www.sparkfun.com/datasheets/Wireless/Zigbee/XBee-Datasheet.pdf) for sub-1 GHz communication, a [TMP36 analog temperature sensor](https://www.analog.com/media/en/technical-documentation/data-sheets/TMP35_36_37.pdf), an [LSM9DS1 Imu sensor](https://www.st.com/resource/en/datasheet/lsm9ds1.pdf) to collect acceleration(x, y,z) for acceleration calculations and a [HTU21D humidity sensor](https://cdn-shop.adafruit.com/datasheets/1899_HTU21D.pdf) to measure current humidity.
 
 #### Wiring Diagram
+
+The wiring for the various sensors and peripherals to the MBed can be found below:
+##### Mbed with XBee Board 
+
+| Mbed Pin      | XBee         |
+| ------------- | ------------- |
+| GND  | GND  |
+| Vout(3.3V)  | VCC  |
+| p9  | DIN  |
+| p10  | DOUT  |
+| p11  | RESET  |
+
+##### Mbed with TMP36 temperature sensor
+
+| Mbed Pin      | Tmp36         |
+| ------------- | ------------- |
+| GND  | GND  |
+| Vout(3.3V)  | VS  |
+| p15  | Vout  |
+
+##### Mbed with LSM9DS1 Imu
+
+| Mbed Pin      | LSM9DS1         |
+| ------------- | ------------- |
+| GND  | GND  |
+| Vout(3.3V)  | VDD  |
+| p28   | SDA  |
+| p27  | SCL  |
+
+###### Note: this was chained to use the same bus as the HTU21D sensor. Since each sensor had a unique address, this was able to work as expected.
+
+##### Mbed with HTU21D humidity sensor
+
+| Mbed Pin      | HTU21D         |
+| ------------- | ------------- |
+| GND  | GND  |
+| Vout(3.3V)  | 3.3v  |
+| p28   | SDA  |
+| p27  | SCL  |
+
+
 #### Building mbed code
 #### Parts List
 ### PocketBeagle
