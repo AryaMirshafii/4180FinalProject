@@ -48,26 +48,26 @@ The programming languges used were,
 The API is hosted using Amazon Web Service's API gateway platform. AWS was chosen due to its ease of use, low cost, and high scalability. In order to upload the API to the AWS cloud, the [Serverless Framework](https://serverless.com/) is used to compile the source code into a .jar file and then upload it. The benefit of using serverless is that it handles deployment and scaling by itself, with minimal effort from the user. This is achieved by doing the following: (Note: this is just to upload using Serverless to AWS, and it is assumed that you already have an existing project)
 
 
-1)Install Serverless using NPM:
+1. Install Serverless using NPM:
 ```console
 npm install -g serverless
 ```
-2)Give serverless your AWS Access Key and Secret Token using:
+2. Give serverless your AWS Access Key and Secret Token using:
 ```console
 export AWS_ACCESS_KEY_ID=YOUR_ACCESS_KEY
 export AWS_SECRET_ACCESS_KEY=YOUR_SECRET_ACCESS_KEY
 ```
 NOTE: Your keys can be found by going into your AWS console and viewing your IAM user information. It should be noted that these keys can only be viewed once so if you already created an IAM user and you forgot your keys, you will need to regenerate new keys and write them down.
 
-3)If the service is already created on AWS you will need to tear down the existing one by running:
+3. If the service is already created on AWS you will need to tear down the existing one by running:
 ```console
 sls remove
 ```
-4) To compile the source code into a .jar file using maven run:
+4. To compile the source code into a .jar file using maven run:
 ```console
 mvn clean install
 ```
-5) Finally, to upload the newly generated .jar to AWS, run:
+5. Finally, to upload the newly generated .jar to AWS, run:
 ```console
 sls deploy
 ```
@@ -75,6 +75,37 @@ sls deploy
 That is all! Serverless handles all of the scaling and once the process is done, serverless will give you a list of API endpoints created which are able to be called using regular HTTP requests.
 
 ### Web Service API
+The web service API is written using the Java programming language as well as the AWS java SDK. Java was used due to its ease of use and scalability as well as its integrability into Amazon Web Services.
+
+Two very important files in the root directory are:
+- pom.xml
+- serverless.yml
+
+##### pom.xml
+This file defines the depenencies of the project. The build system of choice, Maven in this case, reads the pom.xml and downloads and links the necessary dependencies. An example of adding a dependeny to pom.xml can be as simple as:
+
+```
+<dependency>
+  <groupId>com.amazonaws</groupId>
+  <artifactId>aws-java-sdk-dynamodb</artifactId>
+  <version>1.11.119</version>
+</dependency>
+```
+This block of xml adds the dependency for the Java AWS SDK Dynamodb which allows the endpoint to communicate to a Dynamodb database hosted on Amazon Web Services.
+
+##### serverless.yml
+This is a swagger file which is part of the OpenAPI standard for defining the basic structure and properties of a web based API. In this project, when the .jar file is uploaded to the cloud, Amazon Web Services parses it to determine the properties for the service being created. This file can also be used by other developers to view the strucutre of the API without having to read through all of the source code. It is not as helpful in this proejct, due to its small size and low complexity, but a .yml file is invaluable in large scale proejcts with hundreds of endpoints and API behaviors.
+
+
+The directory structure is as follows:
+- dal
+- SensorDataFiles
+- SensorFiles
+##### dal
+This directory contains the source code for the objects that encapsulate the data being passed throughout the API. The two classes are Sensor, which encapsulates a sensor and SensorData, which encapsulates the data being collected from every sensor.
+
+
+
 ### IOS Application
 ### mBed Sensor Pad
 #### Wiring Diagram
