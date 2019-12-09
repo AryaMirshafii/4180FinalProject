@@ -223,6 +223,8 @@ Sensor View:
 ### mBed Sensor Pad
 The sensor pad for this project is based on an MBed microcontroller that interfaces with an [XBee board](https://www.sparkfun.com/datasheets/Wireless/Zigbee/XBee-Datasheet.pdf) for sub-1 GHz communication, a [TMP36 analog temperature sensor](https://www.analog.com/media/en/technical-documentation/data-sheets/TMP35_36_37.pdf), an [LSM9DS1 Imu sensor](https://www.st.com/resource/en/datasheet/lsm9ds1.pdf) to collect acceleration(x, y,z) for acceleration calculations and a [HTU21D humidity sensor](https://cdn-shop.adafruit.com/datasheets/1899_HTU21D.pdf) to measure current humidity.
 
+![Sensor Pad](https://github.com/AryaMirshafii/4180FinalProject/blob/master/Images/sensorTag.jpeg)
+
 #### Wiring Diagram
 
 The wiring for the various sensors and peripherals to the MBed can be found below:
