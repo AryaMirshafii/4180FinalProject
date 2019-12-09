@@ -197,6 +197,29 @@ This method handles the actual data passed into the endpoint and returns a respo
 
 
 ### IOS Application
+The IOS application is written using Swift along with the Xcode IDE and uses the [SwiftyRequest](https://github.com/IBM-Swift/SwiftyRequest) library to generate HTTP requests.
+
+An example of an HTTP request using SwiftyRequest is:
+```
+guard let url = URL(string: endpoints.SENSOR_URL + "/" + sensor!.id) else { return }
+        
+        let session = URLSession.shared
+        session.dataTask(with: url) { (data, response, error) in
+          ..Code to handle the response
+        } 
+        
+```
+
+The app has two major screens:
+- TableView - lists all of the Sensors in the network.
+- ViewController - shows the information for a given sensor.
+
+TableView:
+![TableView](https://github.com/AryaMirshafii/4180FinalProject/blob/master/Images/Table.png)
+
+Sensor View:
+![Sensor View](https://github.com/AryaMirshafii/4180FinalProject/blob/master/Images/Sensor.png)
+
 ### mBed Sensor Pad
 #### Wiring Diagram
 #### Building mbed code
