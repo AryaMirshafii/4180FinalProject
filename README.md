@@ -1,13 +1,46 @@
+Table of Contents
+=================
+
+   * [IoT Senors Network](#iot-senors-network)
+      * [Intoduction](#intoduction)
+      * [Description](#description)
+      * [How to Build Project](#how-to-build-project)
+         * [Block Diagram](#block-diagram)
+         * [Cloud Service](#cloud-service)
+         * [Web Service API](#web-service-api)
+               * [pom.xml](#pomxml)
+               * [serverless.yml](#serverlessyml)
+               * [dal](#dal)
+               * [SensorDataFiles](#sensordatafiles)
+         * [IOS Application](#ios-application)
+         * [mBed Sensor Pad](#mbed-sensor-pad)
+            * [Wiring Diagram](#wiring-diagram)
+               * [Mbed with XBee Board](#mbed-with-xbee-board)
+               * [Mbed with TMP36 temperature sensor](#mbed-with-tmp36-temperature-sensor)
+               * [Mbed with LSM9DS1 Imu](#mbed-with-lsm9ds1-imu)
+               * [Mbed with HTU21D humidity sensor](#mbed-with-htu21d-humidity-sensor)
+            * [Building mbed code](#building-mbed-code)
+         * [PocketBeagle](#pocketbeagle)
+            * [Wiring Diagram`](#wiring-diagram-1)
+               * [PocketBeagle with XBee](#pocketbeagle-with-xbee)
+            * [Adding WiFi](#adding-wifi)
+            * [Connecting the PocketBeagle to Eduroam](#connecting-the-pocketbeagle-to-eduroam)
+            * [Building Cloud Communication Program](#building-cloud-communication-program)
+      * [Conclusion](#conclusion)
+      * [Desired Improvements](#desired-improvements)
+      * [Helpful Links/Thanks to:](#helpful-linksthanks-to)
+         * [PocketBeagle Communication](#pocketbeagle-communication)
+
 # IoT Senors Network
 ## Intoduction
 IoT or Internet of Things is a major part of today's embedded systems. It relates to the conecpt of connecting devices
-to the internet. One of the problems, especially on an enterprise network, is connected all these devices to wifi is not 
+over the internet. One of the problems, especially on an enterprise network, is connecting all these devices to wifi is not 
 always plausible. Also, using a sub-1GHz rf band could consume less power. 
 
 The first benefit is the one we shall focus on. Connecting the mbed or a small embedded device to the school's enterprise
 network is not an easy task. Our IoT Sensor Network provides a solution.
 ## Description
-The IoT Sensors Network is cloud communication done from a Sensor Pad (mbed LPC1768 and XBee with various sensor attached) 
+The IoT Sensors Network is cloud communication done from a Sensor Pad (XBee and a mbed LPC1768 with various sensor attached) 
 to the BeagleBone PocketBeagle to the cloud). This cloud data is displayed on an IOS application.
 
 The platforms used were a baremetal mbed, Debian 9.9 "stretch IoT", IOS, and the Amazon Web Services. 
@@ -422,9 +455,27 @@ if it doesn't connect to eduroam restart and run this command to diagnose what w
 debian@machine:~$ journalctl | grep connmand | less
 ```
 #### Building Cloud Communication Program
+1. Configure reset pin
 ```console
+user@machine:~$ ssh debian@<ip_of_pocketbeagle>
+user@machine:~$ config-pin -a p2.03 out
+user@machine:~$ config-pin -q p2.03
 ```
-## Conclustion
+2. Build and run code after setting up cloud server and wiring.
+```console
+user@machine:~$ cd PocketBeagleCode
+user@machine:~$ sftp debian@<ip_of_pocketbeagle>
+> mkdir PocketBeagleCode
+> cd PocketBeagleCode
+> put *
+> exit
+user@machine:~$ ssh debian@<ip_of_pocketbeagle>
+user@machine:~$ cd PocketBeagleCode
+user@machine:~$ make
+user@machine:~$ make run
+```
+make builds the project. "make run" executes the program. 
+## Conclusion
 IoT networks work and improve a company or individual's ability capture sensor data from small embedded devices. Our IoT sensor 
 network allowed us to capture sensor data and send it over Eduroam, the fastest internet network on campus. We found the other 
 network GT-Other to be too slow for our application.
@@ -433,9 +484,12 @@ network GT-Other to be too slow for our application.
 2. Build a more robust application for cloud communication in C++.
 3. Allow more than one sensor pad to be connected to a single PocketBeagle, requires XBee configuration.
 4. Figure out how to get IPv6 hostnames resolved.
-5. Add more sensors, sensor pads. 
+5. Add more sensors, sensor pads.
+6. Use external power
 ## Helpful Links/Thanks to:
-### mBED Sensors
 ### PocketBeagle Communication
-### WiFi Configuration
-## Parts List
+* [Communicating via UART with the XBee](https://stackoverflow.com/questions/6947413/how-to-open-read-and-write-from-serial-port-in-c) This is 
+pretty difficult wiht a lot of settings to get correct. Luckily this stackoverflow post worked with little modification. I want to credit the user 
+with the top post here.
+* [Navigating the PocketBeagle](http://exploringbeaglebone.com/chapter1/)
+* [Connecting to Eduroam](https://wiki.archlinux.org/index.php/ConnMan#Connecting_to_eduroam_(802.1X))
