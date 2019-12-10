@@ -36,6 +36,8 @@ Table of Contents
 ##### ECE 4180 Section B
 ##### Fall 2019
 
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/C_QAfoOabdY/0.jpg)](https://youtube.com/watch?v=C_QAfoOabdY)
+
 ## Intoduction
 IoT or Internet of Things is a major part of today's embedded systems. It relates to the conecpt of connecting devices
 over the internet. One of the problems, especially on an enterprise network, is connecting all these devices to wifi is not 
