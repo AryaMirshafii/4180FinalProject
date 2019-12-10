@@ -32,9 +32,12 @@ Table of Contents
          * [PocketBeagle Communication](#pocketbeagle-communication)
 
 # IoT Senors Network 
-##### by Arya Mirshafii and Matthew Schilling
-##### ECE 4180 Section B
-##### Fall 2019
+#### by Arya Mirshafii and Matthew Schilling
+#### ECE 4180 Section B
+#### Fall 2019
+
+
+##### Demonstration Video (click):
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/C_QAfoOabdY/0.jpg)](https://youtube.com/watch?v=C_QAfoOabdY)
 
