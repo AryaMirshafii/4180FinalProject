@@ -1,29 +1,3 @@
-Table of Contents
-=================
-
-   * [IoT Senors Network](#iot-senors-network)
-      * [Intoduction](#intoduction)
-      * [Description](#description)
-      * [How to Build Project](#how-to-build-project)
-         * [Block Diagram](#block-diagram)
-         * [Cloud Service](#cloud-service)
-         * [Web Service API](#web-service-api)
-         * [IOS Application](#ios-application)
-         * [mBed Sensor Pad](#mbed-sensor-pad)
-         * [PocketBeagle](#pocketbeagle)
-            * [Wiring Diagram](#wiring-diagram)
-            * [Connecting the XBee module](#connecting-the-xbee-module)
-            * [Connceting WiFi](#connceting-wifi)
-            * [Connecting the PocketBeagle to Eduroam](#connecting-the-pocketbeagle-to-eduroam)
-            * [Building Cloud Communication Program](building-program)
-      * [Conclustion](#conclustion)
-      * [Desired Improvements](#desired-improvements)
-      * [Helpful Links/Thanks to](#helpful-links/thanks-to)
-         * [mBED Sensors](#mbed-sensors)
-         * [PocketBeagle Communication](#pocketbeagle-communication)
-         * [WiFi Configuration](#wifi-configuration)
-      * [Parts List](parts-list)
-
 # IoT Senors Network
 ## Intoduction
 IoT or Internet of Things is a major part of today's embedded systems. It relates to the conecpt of connecting devices
@@ -338,11 +312,55 @@ xbee1.printf("T:%f \n\r", tempF);
 xbee1.printf("H:%d \n\r", humidity);
 ```
 
-#### Parts List
 ### PocketBeagle
-#### Wiring Diagram
-#### Connecting the XBee module
+
+![TableView](https://github.com/AryaMirshafii/4180FinalProject/blob/master/Images/PocketBeagleWires.jpg)
+
+#### Wiring Diagram`
+
+##### PocketBeagle with XBee
+The PocketBeagle has two sets of pins, P1, P2.
+
+These names of these pins can be found [here](https://github.com/beagleboard/pocketbeagle/wiki/System-Reference-Manual).
+
+This guide will use Header.pin (silkscreen)
+
+| PocketBeagle  | XBee         |
+| ------------- | ------------- |
+| p1.16 (GND)   | GND  |
+| p2.23 (+3.3V) | VCC  |
+| p2.07 (U1 TX) | DIN  |
+| p2.05 (U1 RX) | DOUT  |
+| p2.03 (23)    | RESET  |
+
+
+| PocketBeagle   | [USB-A Female Breakout](https://www.sparkfun.com/products/12700) |
+| -------------  | ------------- |
+| p1.16 (GND)    | GND  |
+| p1.03 (USB1 EN)| GND  |
+| p1.07 (VI) p1.05 (VB) | VCC  |
+| p1.11 (USB1+) | D+  |
+| p1.09 (USB1-) | D-  |
+
+| PocketBeagle   | Barrel Jack conncted to 5V 2A Powersupply |
+| -------------  | ------------- |
+| p1.01 (VIN)    | Power pin |
+| p1.16 (GND)    | GND |
+
+
 #### Adding WiFi
+* Use a usb hub into the female breakout board and plug a wifi module in. We use a Edimax one that works out of the box
+https://www.amazon.com/Edimax-EW-7811Un-150Mbps-Raspberry-Supports/dp/B003MTTJOY
+
+* After sshing or connecting to the PocketBeagle run the command "lsusb" to determine if it is available. Also, if you 
+use the Edimax, it will have an internal LED that will light up when active.
+
+* Your DHCP server should automatically assign it an IP adddress. You can find that by looking for "wlan0" when you run
+the command "ifconfig." The IP address can be used to ssh into the OS from now on. use
+```console
+ssh debian@<ip_address_of_pocketbeagle>
+```
+to login. 
 #### Connecting the PocketBeagle to Eduroam
 Use the Connman utility that comes with Debian.
 1. sftp the eduroam.config file under the PocketBeagleCode directory to the PocketBeagle. Use Windows or Linux because the 
@@ -378,7 +396,7 @@ your favorite console text editor. If you were not able to sftp in the network, 
 More information on this configuration file can be found [here](https://manpages.debian.org/testing/connman/connman-service.config.5.en.html).
 ```console
 debian@machine:~$ cd /var/lib/connman
-debian@machine:~$ sudo vim /var/lib/connman/eduroam.config
+debian@machine:~$ sudo vim eduroam.config
 ```
 Now wait for the Eduroam to connect. If it doesn't you may have to restart Connman or start the PocketBeagle, using the button on
 the top. Use this command to determine if you are connected. A new network interface will show up wlan0 and it will have a new 
@@ -404,6 +422,8 @@ if it doesn't connect to eduroam restart and run this command to diagnose what w
 debian@machine:~$ journalctl | grep connmand | less
 ```
 #### Building Cloud Communication Program
+```console
+```
 ## Conclustion
 IoT networks work and improve a company or individual's ability capture sensor data from small embedded devices. Our IoT sensor 
 network allowed us to capture sensor data and send it over Eduroam, the fastest internet network on campus. We found the other 
