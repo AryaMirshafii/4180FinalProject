@@ -31,7 +31,11 @@ Table of Contents
       * [Helpful Links/Thanks to:](#helpful-linksthanks-to)
          * [PocketBeagle Communication](#pocketbeagle-communication)
 
-# IoT Senors Network
+# IoT Senors Network 
+##### by Arya Mirshafii and Matthew Schilling
+##### ECE 4180 Section B
+##### Fall 2019
+
 ## Intoduction
 IoT or Internet of Things is a major part of today's embedded systems. It relates to the conecpt of connecting devices
 over the internet. One of the problems, especially on an enterprise network, is connecting all these devices to wifi is not 
