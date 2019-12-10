@@ -18,6 +18,10 @@
 #include <string>
 #include <chrono>
 
+// set_interface_attribs()
+//
+// Thanks to:
+// https://stackoverflow.com/questions/6947413/how-to-open-read-and-write-from-serial-port-in-c
 // UART Settings Configurations
 //
 // @args fd file descriptor
